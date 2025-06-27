@@ -163,7 +163,7 @@ export default function AnimationSidebar() {
 
   return (
     <aside className="w-80 relative overflow-hidden">
-      <div className="bg-gray-900 border-r border-gray-800 p-4 pb-1 w-80 max-h-screen fixed grid grid-rows-[auto_1fr]">
+      <div className="bg-gray-900 border-r border-gray-800 p-4 px-2 pb-1 w-80 max-h-screen fixed grid grid-rows-[auto_1fr]">
         <div className="mb-6">
           <h2 className="text-2xl font-bold text-white mb-4">Animations</h2>
 
@@ -193,7 +193,7 @@ export default function AnimationSidebar() {
         </div>
 
         {/* Animations List */}
-        <div className="space-y-2 overflow-y-auto h-full [&::-webkit-scrollbar]:w-[3px] [&::-webkit-scrollbar-thumb]:bg-gray-600">
+        <div className="space-y-2 overflow-y-auto h-full pr-2 [&::-webkit-scrollbar]:w-[3px] [&::-webkit-scrollbar-thumb]:bg-gray-600">
           {filteredAnimations.map((animation) => (
             <button
               key={animation.id}
@@ -208,6 +208,7 @@ export default function AnimationSidebar() {
                 <span className="text-lg">
                   {getAnimationIcon(animation.category)}
                 </span>
+
                 <div className="flex-1 min-w-0">
                   <div className="font-medium truncate">{animation.name}</div>
                   <div className="text-xs text-gray-400 capitalize">
