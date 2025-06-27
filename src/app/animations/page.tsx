@@ -1,5 +1,5 @@
-import AnimationSidebar from "../components/modules/AnimationSidebar";
-import AnimationGrid from "../components/modules/AnimationGrid";
+import AnimationSidebar from "../../components/modules/AnimationSidebar";
+import AnimationGrid from "../../components/modules/AnimationGrid";
 
 export default function AnimationsPage() {
   return (
