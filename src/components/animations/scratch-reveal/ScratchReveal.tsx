@@ -42,7 +42,7 @@ export function ScratchReveal() {
       }
 
       function onMouseEnd() {
-        // isDrawing.current = false;
+        // isDrawing.current = false; // currently not used as we want to draw on hover
       }
 
       canvas.addEventListener("mousedown", onMouseDown);
