@@ -14,10 +14,8 @@ export default function Hero() {
         <div className="mb-8">
           <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-white mb-6 leading-tight">
             <span className="bg-gradient-to-r from-purple-400 via-pink-500 to-blue-500 bg-clip-text text-transparent">
-              Animations
+              Motion Mimic
             </span>
-            <br />
-            <span className="text-gray-100">Library</span>
           </h1>
 
           <p className="text-xl sm:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
@@ -35,9 +33,9 @@ export default function Hero() {
             <div className="absolute inset-0 bg-gradient-to-r from-purple-700 to-blue-700 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
           </Link>
 
-          <button className="px-8 py-4 border-2 border-gray-600 text-gray-300 font-semibold rounded-full text-lg transition-all duration-300 hover:border-purple-500 hover:text-purple-400 hover:bg-purple-500/10">
+          {/* <button className="px-8 py-4 border-2 border-gray-600 text-gray-300 font-semibold rounded-full text-lg transition-all duration-300 hover:border-purple-500 hover:text-purple-400 hover:bg-purple-500/10">
             View Documentation
-          </button>
+          </button> */}
         </div>
 
         <div className="mt-16 grid grid-cols-1 sm:grid-cols-3 gap-8 text-center">
@@ -109,7 +107,7 @@ export default function Hero() {
               Easy to Use
             </h3>
             <p className="text-gray-400">
-              Simple API that makes integration effortless
+              Take code and control the animation fully
             </p>
           </div>
         </div>
