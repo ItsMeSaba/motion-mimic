@@ -216,22 +216,6 @@ export default function AnimationSidebar() {
                   </div>
                 </div>
               </div>
-              <div className="flex space-x-1 ml-2">
-                <span
-                  className={`px-2 py-1 rounded-full text-xs font-medium text-white ${getDifficultyColor(
-                    animation.difficulty
-                  )}`}
-                >
-                  {animation.difficulty}
-                </span>
-                <span
-                  className={`px-2 py-1 rounded-full text-xs font-medium text-white ${getTypeColor(
-                    animation.type
-                  )}`}
-                >
-                  {animation.type.toUpperCase()}
-                </span>
-              </div>
             </button>
           ))}
         </div>
