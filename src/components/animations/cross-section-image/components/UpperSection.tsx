@@ -68,7 +68,7 @@ export function UpperSection({
                   left: `${imageProperties.x}px`,
                   display: isImageDisplayed ? "initial" : "none",
                 }}
-                className="absolute transition-all duration-300 rounded-lg w-[600] h-[600] block"
+                className="absolute transition-all ease-out duration-750 rounded-lg block"
               />
             </div>
           </div>
