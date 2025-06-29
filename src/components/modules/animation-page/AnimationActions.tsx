@@ -1,0 +1,44 @@
+import { Animation } from "@/types/animation";
+
+export function AnimationActions({
+  animation,
+  isCodeVisible,
+  setIsCodeVisible,
+}: {
+  animation: Animation;
+  isCodeVisible: boolean;
+  setIsCodeVisible: (visible: boolean) => void;
+}) {
+  const handleCopyCode = () => {
+    // TODO: Implement code copying functionality
+    console.log("Copy code for:", animation.id);
+  };
+
+  const handleViewDemo = () => {
+    // TODO: Implement demo viewing functionality
+    console.log("View demo for:", animation.id);
+  };
+
+  return (
+    <div className="flex space-x-4 mb-8">
+      <button
+        onClick={handleViewDemo}
+        className="px-6 py-3 bg-purple-600 text-white font-medium rounded-lg hover:bg-purple-700 transition-colors"
+      >
+        View Live Demo
+      </button>
+      <button
+        onClick={handleCopyCode}
+        className="px-6 py-3 border border-gray-600 text-gray-300 font-medium rounded-lg hover:border-purple-500 hover:text-purple-400 transition-colors"
+      >
+        Copy Code
+      </button>
+      <button
+        onClick={() => setIsCodeVisible(!isCodeVisible)}
+        className="px-6 py-3 border border-gray-600 text-gray-300 font-medium rounded-lg hover:border-purple-500 hover:text-purple-400 transition-colors"
+      >
+        {isCodeVisible ? "Hide Code" : "Show Code"}
+      </button>
+    </div>
+  );
+}

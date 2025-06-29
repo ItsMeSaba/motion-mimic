@@ -1,25 +1,11 @@
 "use client";
 
 import { animations } from "@/data/animations";
+import { Animation } from "@/types/animation";
 import Image from "next/image";
-import { useState } from "react";
-
-interface Animation {
-  id: string;
-  name: string;
-  description: string;
-  category: string;
-  tags: string[];
-  preview: string;
-  difficulty: "easy" | "medium" | "hard";
-  type: "css" | "js" | "react";
-}
+import Link from "next/link";
 
 export default function AnimationGrid() {
-  const [selectedAnimation, setSelectedAnimation] = useState<string | null>(
-    null
-  );
-
   const getDifficultyColor = (difficulty: string) => {
     switch (difficulty) {
       case "easy":
@@ -49,10 +35,10 @@ export default function AnimationGrid() {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
       {animations.map((animation) => (
-        <div
+        <Link
           key={animation.id}
-          className="bg-gray-900 rounded-xl border border-gray-800 overflow-hidden hover:border-purple-500 transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/10 group cursor-pointer"
-          onClick={() => setSelectedAnimation(animation.id)}
+          href={`/animations/${animation.id}`}
+          className="bg-gray-900 rounded-xl border border-gray-800 overflow-hidden hover:border-purple-500 transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/10 group cursor-pointer block"
         >
           {/* Preview Area */}
           <div className="h-80 bg-gradient-to-br from-gray-800 to-gray-900 flex items-center justify-center relative overflow-hidden">
@@ -74,7 +60,7 @@ export default function AnimationGrid() {
               <h3 className="text-lg font-semibold text-white group-hover:text-purple-400 transition-colors">
                 {animation.name}
               </h3>
-              {/* <div className="flex space-x-2">
+              <div className="flex space-x-2">
                 <span
                   className={`px-2 py-1 rounded-full text-xs font-medium text-white ${getTypeColor(
                     animation.type
@@ -82,7 +68,14 @@ export default function AnimationGrid() {
                 >
                   {animation.type.toUpperCase()}
                 </span>
-              </div> */}
+                <span
+                  className={`px-2 py-1 rounded-full text-xs font-medium text-white ${getDifficultyColor(
+                    animation.difficulty
+                  )}`}
+                >
+                  {animation.difficulty}
+                </span>
+              </div>
             </div>
 
             <p className="text-gray-400 text-sm mb-4 line-clamp-2">
@@ -108,10 +101,24 @@ export default function AnimationGrid() {
 
             {/* Actions */}
             <div className="flex space-x-2">
-              <button className="flex-1 px-3 py-2 bg-purple-600 text-white text-sm font-medium rounded-lg hover:bg-purple-700 transition-colors">
+              <button
+                onClick={(e) => {
+                  e.preventDefault();
+                  // TODO: Implement code copying functionality
+                  console.log("Copy code for:", animation.id);
+                }}
+                className="flex-1 px-3 py-2 bg-purple-600 text-white text-sm font-medium rounded-lg hover:bg-purple-700 transition-colors"
+              >
                 Copy Code
               </button>
-              <button className="px-3 py-2 border border-gray-600 text-gray-300 text-sm font-medium rounded-lg hover:border-purple-500 hover:text-purple-400 transition-colors">
+              <button
+                onClick={(e) => {
+                  e.preventDefault();
+                  // TODO: Implement external link functionality
+                  console.log("External link for:", animation.id);
+                }}
+                className="px-3 py-2 border border-gray-600 text-gray-300 text-sm font-medium rounded-lg hover:border-purple-500 hover:text-purple-400 transition-colors"
+              >
                 <svg
                   className="w-4 h-4"
                   fill="none"
@@ -128,7 +135,7 @@ export default function AnimationGrid() {
               </button>
             </div>
           </div>
-        </div>
+        </Link>
       ))}
     </div>
   );

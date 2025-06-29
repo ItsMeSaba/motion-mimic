@@ -1,9 +1,9 @@
-import { ScratchReveal } from "@/components/animations/scratch-reveal/ScratchReveal";
+import { CrossSectionImage } from "@/components/animations/cross-section-image/CrossSectionImage";
 
 export default function Playground() {
   return (
     <div>
-      <ScratchReveal />
+      <CrossSectionImage />
     </div>
   );
 }
