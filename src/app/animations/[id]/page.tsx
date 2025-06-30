@@ -1,6 +1,6 @@
 import { RelatedAnimations } from "@/components/modules/animation-page/RelatedAnimations";
 import { UsageInstructions } from "@/components/modules/animation-page/UsageInstructions";
-import { AnimationSidebar } from "@/components/modules/animation-page/AnimationSidebar";
+import { AnimationSidebar } from "@/components/modules/animation-page/Sidebar";
 import { AnimationActions } from "@/components/modules/animation-page/AnimationActions";
 import { AnimationPreview } from "@/components/modules/animation-page/AnimationPreview";
 import { AnimationHeader } from "@/components/modules/animation-page/AnimationHeader";

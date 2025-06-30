@@ -1,14 +1,12 @@
-import AnimationSidebar from "../../components/sections/animation-sidebar/AnimationSidebar";
+import AnimationSidebar from "../../components/sections/AnimationSidebar";
 import AnimationGrid from "../../components/sections/AnimationGrid";
 
 export default function AnimationsPage() {
   return (
     <div className="min-h-screen bg-black">
       <div className="flex">
-        {/* Sidebar */}
         <AnimationSidebar />
 
-        {/* Main Content */}
         <main className="flex-1 p-6 lg:p-8">
           <div className="max-w-7xl mx-auto">
             <div className="mb-8">
