@@ -1,5 +1,5 @@
 import ScratchRevealGif from "@/assets/animations/scratch-reveal-preview.gif";
-import CrossSectionImageGif from "@/assets/animations/cross-section-image/cross-section-image-preview.gif";
+import CrossSectionImageGif from "@/assets/animations/cross-section-image-preview.gif";
 
 export const animations = [
   {

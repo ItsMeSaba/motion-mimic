@@ -1,10 +1,6 @@
 "use client";
 
-import {
-  calculateValueFromPercentage,
-  getValuesFromPercentage,
-} from "./utils/calculate-value-from-percentage";
-import { calculatePercentage } from "./utils/calculate-percentage";
+import { getValuesFromPercentage } from "./utils/calculate-value-from-percentage";
 import { BottomSection } from "./components/BottomSection";
 import { UpperSection } from "./components/UpperSection";
 import { useEffect, useRef, useState } from "react";

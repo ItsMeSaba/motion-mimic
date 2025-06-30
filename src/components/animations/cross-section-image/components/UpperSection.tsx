@@ -1,7 +1,7 @@
 import Image from "next/image";
-import ImageSquare from "@/assets/animations/cross-section-image/image-square.png";
-import ImageHorizontal from "@/assets/animations/cross-section-image/image-horizontal.png";
-import ImageVertical from "@/assets/animations/cross-section-image/image-vertical.png";
+import ImageSquare from "../assets/image-square.png";
+import ImageHorizontal from "../assets/image-horizontal.png";
+import ImageVertical from "../assets/image-vertical.png";
 
 interface Props {
   startingDiv: React.RefObject<HTMLDivElement | null>;

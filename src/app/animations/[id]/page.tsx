@@ -32,9 +32,9 @@ export default async function AnimationPage({ params }: AnimationPageProps) {
           <div className="max-w-6xl mx-auto">
             <AnimationHeader animation={animation} />
             <AnimationPreview animation={animation} />
-            {/* <AnimationActions animation={animation} /> */}
+            <AnimationActions animation={animation} />
             {/* <CodeSection animation={animation} /> */}
-            {/* <UsageInstructions /> */}
+            <UsageInstructions />
             <RelatedAnimations currentAnimationId={animation.id} />
           </div>
         </main>
