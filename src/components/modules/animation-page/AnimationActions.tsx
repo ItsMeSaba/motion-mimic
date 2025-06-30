@@ -16,7 +16,12 @@ export function AnimationActions({ animation }: { animation: Animation }) {
         Copy Code
       </button> */}
 
-      <button className="px-6 py-3 border border-gray-600 text-gray-300 font-medium rounded-lg hover:border-purple-500 hover:text-purple-400 transition-colors">
+      <button
+        onClick={() =>
+          (window.location.href = `/api/download-source?animation-id=${animation.id}`)
+        }
+        className="px-6 py-3 border border-gray-600 text-gray-300 font-medium rounded-lg hover:border-purple-500 hover:text-purple-400 transition-colors"
+      >
         Download Source
       </button>
     </div>
