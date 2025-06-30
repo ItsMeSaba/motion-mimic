@@ -1,4 +1,5 @@
-import ScratchRevealGif from "@/assets/animations/scratch-reveal.gif";
+import ScratchRevealGif from "@/assets/animations/scratch-reveal-preview.gif";
+import CrossSectionImageGif from "@/assets/animations/cross-section-image/cross-section-image-preview.gif";
 
 export const animations = [
   {
@@ -8,6 +9,17 @@ export const animations = [
     category: "entrance",
     tags: ["scratch", "reveal", "animation"],
     preview: ScratchRevealGif,
+    icon: "🔍",
+    difficulty: "medium" as const,
+    type: "css" as const,
+  },
+  {
+    id: "cross-section-image",
+    name: "Cross Section Image",
+    description: "Cross section image animation",
+    category: "entrance",
+    tags: ["cross", "section", "image"],
+    preview: CrossSectionImageGif,
     icon: "🔍",
     difficulty: "medium" as const,
     type: "css" as const,

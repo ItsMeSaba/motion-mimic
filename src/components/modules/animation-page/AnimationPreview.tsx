@@ -4,8 +4,8 @@ import Image from "next/image";
 export function AnimationPreview({ animation }: { animation: Animation }) {
   return (
     <div className="mb-8">
-      <div className="bg-gray-900 rounded-xl border border-gray-800 overflow-hidden">
-        <div className="h-96 bg-gradient-to-br from-gray-800 to-gray-900 flex items-center justify-center relative">
+      <div className="rounded-xl border-4 border-gray-800 overflow-hidden">
+        <div className="h-[600px] flex items-center justify-center relative">
           <Image
             src={animation.preview}
             alt={animation.name}

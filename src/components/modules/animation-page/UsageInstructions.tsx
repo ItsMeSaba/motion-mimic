@@ -1,4 +1,4 @@
-const UsageInstructions = () => {
+export function UsageInstructions() {
   return (
     <div className="mb-8">
       <h2 className="text-2xl font-bold text-white mb-4">How to Use</h2>
@@ -14,4 +14,4 @@ const UsageInstructions = () => {
       </div>
     </div>
   );
-};
+}

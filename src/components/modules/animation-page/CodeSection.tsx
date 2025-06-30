@@ -1,14 +1,6 @@
 import { Animation } from "@/types/animation";
 
-export function CodeSection({
-  animation,
-  isCodeVisible,
-}: {
-  animation: Animation;
-  isCodeVisible: boolean;
-}) {
-  if (!isCodeVisible) return null;
-
+export function CodeSection({ animation }: { animation: Animation }) {
   return (
     <div className="mb-8">
       <h2 className="text-2xl font-bold text-white mb-4">Code</h2>
