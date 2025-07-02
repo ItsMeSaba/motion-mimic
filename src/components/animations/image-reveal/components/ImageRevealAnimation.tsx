@@ -21,7 +21,7 @@ export function ImageRevealImage({
   imgStyleObjectPositionVertical = "50%",
   loading = "eager",
   threshold = 0.5,
-  delay = 0.2,
+  delay = 0.5,
   ...imageProps
 }: AnimatedImageProps) {
   const [imageLoaded, setImageLoaded] = useState(false);
@@ -51,7 +51,7 @@ export function ImageRevealImage({
       ];
 
       const animationOptions = {
-        duration: 700,
+        duration: 1250,
         easing: "cubic-bezier(0.215, 0.61, 0.85, 1)",
         fill: "forwards" as FillMode,
         delay: delay * 1000,
@@ -77,7 +77,7 @@ export function ImageRevealImage({
         <NextImage
           {...imageProps}
           loading={loading}
-          onLoad={(e) => setImageLoaded(true)}
+          onLoad={() => setImageLoaded(true)}
         />
       </div>
     </div>

@@ -1,4 +1,4 @@
-import { ImageRevealImage } from "./components/ImageRevealImage";
+import { ImageRevealImage } from "./components/ImageRevealAnimation";
 import { Content } from "./components/Content";
 import Image from "./assets/image.webp";
 
