@@ -1,9 +1,9 @@
-import { CrossSectionImage } from "@/components/animations/cross-section-image/CrossSectionImage";
+import { ImageReveal } from "@/components/animations/image-reveal/ImageReveal";
 
 export default function Playground() {
   return (
     <div>
-      <CrossSectionImage />
+      <ImageReveal />
     </div>
   );
 }
