@@ -104,14 +104,14 @@ export default function AnimationGrid() {
               <button
                 onClick={(e) => {
                   e.preventDefault();
-                  // TODO: Implement code copying functionality
-                  console.log("Copy code for:", animation.id);
+                  window.location.href = `/api/download-source?animation-id=${animation.id}`;
                 }}
-                className="flex-1 px-3 py-2 bg-purple-600 text-white text-sm font-medium rounded-lg hover:bg-purple-700 transition-colors"
+                className="flex-1 cursor-pointer px-3 py-2 bg-purple-600 text-white text-sm font-medium rounded-lg hover:bg-purple-700 transition-colors"
               >
-                Copy Code
+                Download Source
               </button>
-              <button
+
+              {/* <button
                 onClick={(e) => {
                   e.preventDefault();
                   // TODO: Implement external link functionality
@@ -132,7 +132,7 @@ export default function AnimationGrid() {
                     d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
                   />
                 </svg>
-              </button>
+              </button> */}
             </div>
           </div>
         </Link>
